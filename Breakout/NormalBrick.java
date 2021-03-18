@@ -6,16 +6,15 @@ public class NormalBrick extends Rectangle implements Brick {
     private Color color;
     // Each normal brick only has 3 hit points.
     private int hitPoints = 3;
-    private static final int WIDTH = 75, HEIGHT = 35;
 
     /**
-     * Initializes a brick with width of 75px and height of 35px.
+     * Initializes a normal brick with width of 75px and height of 35px.
      *
      * @param x The x-coordinate of this brick.
      * @param y The y-coordinate of this brick.
      */
     public NormalBrick(int x, int y) {
-        super(x, y, WIDTH, HEIGHT);
+        super(x, y, Brick.WIDTH, Brick.HEIGHT);
         color = Color.magenta;
     }
 

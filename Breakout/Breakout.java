@@ -9,9 +9,13 @@ import Utilities.SoundDriverHo;
 public class Breakout extends GDV5 {
 
 	private Brick brick;
+	private WallBrick brick2;
+	private Level board;
 
 	public Breakout() {
 		brick = new NormalBrick(50, 50);
+		brick2 = new WallBrick(100, 100);
+		board = new Level();
 	}
 
 	@Override
@@ -21,8 +25,10 @@ public class Breakout extends GDV5 {
 
 	@Override
 	public void draw(Graphics2D win) {
+		board.draw(win);
 		// TextScreens.drawTitle(win);
-		brick.draw(win);
+		// brick.draw(win);
+		// brick2.draw(win);
 	}
 }
 

@@ -4,7 +4,16 @@ import java.awt.*;
 
 public class WallBrick extends Rectangle implements Brick {
     private Color color = Color.GRAY;
-    private static final int WIDTH = 75, HEIGHT = 35;
+
+    /**
+     * Initializes a wall brick with width of 75px and height of 35px.
+     *
+     * @param x The x-coordinate of this brick.
+     * @param y The y-coordinate of this brick.
+     */
+    public WallBrick(int x, int y) {
+        super(x, y, Brick.WIDTH, Brick.HEIGHT);
+    }
 
     @Override
     public Color getColor() {
