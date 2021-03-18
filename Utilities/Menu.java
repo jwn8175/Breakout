@@ -4,8 +4,6 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics2D;
 
-import Test.text;
-
 public class Menu {
 	
 	Font titleFont = new Font("Helvetica", Font.BOLD, 50);
