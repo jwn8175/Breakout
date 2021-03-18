@@ -6,19 +6,19 @@ import java.awt.Graphics2D;
 
 public class TextScreens {
 	
-	String[] screens = {"title", "game over", "win"};
+	private static String[] screens = {"title", "game over", "win"};
 	// int mode;
-	
-	Font titleFont = new Font("Helvetica", Font.BOLD, 50);
-	Font subFont = new Font("Helvetica", Font.ITALIC, 20);
-	Font menuFont = new Font("Helvetica", Font.PLAIN, 25);
-	Font insFont = new Font("Helvetica", Font.PLAIN, 15);
-	String instructions = "How To Play:";
-	String instructions1 = "Use [Left] and [Right] arrow keys to move the paddle";
-	String instructions2 = "Use [Up] arrow key to fire powerups";
-	String instructions3 = "Three lives, three levels";
+
+	private static Font titleFont = new Font("Helvetica", Font.BOLD, 50);
+	private static Font subFont = new Font("Helvetica", Font.ITALIC, 20);
+	private static Font menuFont = new Font("Helvetica", Font.PLAIN, 25);
+	private static Font insFont = new Font("Helvetica", Font.PLAIN, 15);
+	private static String instructions = "How To Play:";
+	private static String instructions1 = "Use [Left] and [Right] arrow keys to move the paddle";
+	private static String instructions2 = "Use [Up] arrow key to fire powerups";
+	private static String instructions3 = "Three lives, three levels";
 		
-	public void drawTitle(Graphics2D win) {
+	public static void drawTitle(Graphics2D win) {
 		win.setColor(Color.WHITE);
 		drawCenteredString(win, "Breakout", titleFont, 200);
 		drawCenteredString(win, "By Jay Ni", subFont, 220);
@@ -30,7 +30,7 @@ public class TextScreens {
 		drawCenteredString(win, instructions3, insFont, 480);
 	}
 	
-	public void drawGameOver(Graphics2D win, int score) {
+	public static void drawGameOver(Graphics2D win, int score) {
 		win.setColor(Color.WHITE);
 		drawCenteredString(win, "Game Over!", titleFont, 280);
 		drawCenteredString(win, "Press [Esc] to return to the menu", menuFont, 340);
@@ -39,21 +39,21 @@ public class TextScreens {
 		
 	}
 	
-	public void drawScore(Graphics2D win, int score) {
+	public static void drawScore(Graphics2D win, int score) {
 		win.setColor(Color.WHITE);
 		win.setFont(menuFont);
 		String s = "Score: " + Integer.toString(score);
 		win.drawString(s, 10, 700);
 	}
 	
-	public void drawLives(Graphics2D win, int lives) {
+	public static void drawLives(Graphics2D win, int lives) {
 		win.setColor(Color.WHITE);
 		win.setFont(menuFont);
-		String s = "Lives Left: " + Integer.toString(lives);
+		String s = "Lives Left: " + lives;
 		win.drawString(s, 10, 670);
 	}
 
-	public void drawCenteredString(Graphics2D win, String s, Font f, int y) {
+	private static void drawCenteredString(Graphics2D win, String s, Font f, int y) {
 		int w = win.getFontMetrics(f).stringWidth(s);
 		int h = win.getFontMetrics(f).getHeight();
 		win.setFont(f);

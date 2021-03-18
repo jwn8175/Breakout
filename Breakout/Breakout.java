@@ -16,7 +16,7 @@ public class Breakout extends GDV5 {
 
 	@Override
 	public void draw(Graphics2D win) {
-
+		TextScreens.drawTitle(win);
 	}
 }
 
