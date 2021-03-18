@@ -11,7 +11,7 @@ public class Breakout extends GDV5 {
 	private Brick brick;
 
 	public Breakout() {
-		brick = new NormalBrick(50, 50, 3);
+		brick = new NormalBrick(50, 50);
 	}
 
 	@Override
