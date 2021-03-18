@@ -1,6 +1,6 @@
 # Breakout
 
-I wrote this game of breakout in 2019 for a project in high schoool. Contains sloppy code and bad structure design. Will not be surprised if I see this on r/badcode some day.
+I wrote this game of breakout in 2019 for a project in high schoool. Contains sloppy code and bad design. I think it was mostly crammed in on the due date, so implementation is quite poor. Will not be surprised if I see this on r/badcode some day.
 
 If you want to try the game out, pull from ```master``` and run ```Breakout.main()```. It's playable, barely.
 
