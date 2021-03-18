@@ -4,10 +4,9 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 
-public class SBrick extends Rectangle {
+public class SBrick extends Rectangle implements GameObject {
 	
 	Color c;
-	int code;
 	boolean active = false;
 	
 	static int width = 75, height = 35, buffer = 5;
@@ -24,7 +23,8 @@ public class SBrick extends Rectangle {
 			this.active = false;
 		}		
 	}
-	
+
+	@Override
 	public void draw(Graphics2D win) {
 
 		win.setColor(this.c);
