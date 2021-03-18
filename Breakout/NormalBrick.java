@@ -26,9 +26,10 @@ public class NormalBrick extends Rectangle implements Brick {
      *
      * @return True if the brick is destroyed, false otherwise;
      */
+    @Override
     public boolean hit() {
         hitPoints -= 1;
-        if (getHitPoints() == 0) {
+        if (getHitPoints() <= 0) {
             this.setSize(0 ,0);
             return true;
         } else if (getHitPoints() == 2) {
